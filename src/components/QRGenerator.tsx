@@ -5,11 +5,6 @@ import styled from 'styled-components';
 // QR 코드 타입 정의
 export type QRType = 'text' | 'url' | 'email' | 'phone' | 'contact' | 'wifi' | 'location';
 
-interface QRData {
-  type: QRType;
-  content: string;
-}
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -132,7 +127,6 @@ const QRGenerator: React.FC = () => {
   const [selectedType, setSelectedType] = useState<QRType>('text');
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [qrDataUrl, setQrDataUrl] = useState<string>('');
-  const [qrContent, setQrContent] = useState<string>('');
 
   const qrTypes = [
     { type: 'text' as QRType, label: '📝 텍스트', emoji: '📝' },
@@ -212,7 +206,6 @@ const QRGenerator: React.FC = () => {
   // 폼 데이터 변경 시 QR 코드 업데이트
   useEffect(() => {
     const content = generateQRContent(selectedType, formData);
-    setQrContent(content);
     generateQRCode(content);
   }, [selectedType, formData]);
 
