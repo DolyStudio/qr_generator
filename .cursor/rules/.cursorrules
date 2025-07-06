@@ -1,0 +1,125 @@
+# 🎯 QR 코드 생성기 프로젝트 규칙
+
+## 📝 프로젝트 현재 상태 (2024년 기준)
+
+### 🔄 개발 진행 상황
+- **1단계 완료**: 기본 QR 코드 생성기 구축 ✅
+- **2단계 완료**: 로그인 시스템 추가 (제거됨) ❌
+- **3단계 완료**: Google 소셜 로그인 통합 (제거됨) ❌
+- **4단계 완료**: 백엔드 연동 (제거됨) ❌
+- **현재 상태**: 단순한 QR 코드 생성기로 회귀 🎯
+
+### 🏗️ 현재 구조
+```
+qr-generator-frontend/
+├── src/
+│   ├── components/
+│   │   └── QRGenerator.tsx     # 메인 QR 생성기 (로그인 기능 제거됨)
+│   ├── App.tsx                 # 메인 앱 컴포넌트
+│   └── ...기타 파일들
+├── package.json                # React + TypeScript + Styled Components
+└── README.md                   # 기본 Create React App 문서
+```
+
+### 🎨 현재 구현된 기능
+- **7가지 QR 코드 타입**: 텍스트, URL, 이메일, 전화번호, 연락처, Wi-Fi, 위치
+- **실시간 미리보기**: 입력과 동시에 QR 코드 생성
+- **바로 다운로드**: 로그인 없이 즉시 다운로드 가능
+- **고품질 이미지**: PNG 형태 300x300 해상도
+- **미니멀 디자인**: 깔끔하고 모던한 UI
+
+### 📦 기술 스택
+- **Frontend**: React 18 + TypeScript, Styled Components, QRCode.js
+- **패키지**: qrcode, axios, styled-components, @types/qrcode, @types/styled-components
+- **삭제된 기능**: 로그인 모달, 인증 훅, 백엔드 API 연동
+
+## 🚀 향후 개발 계획
+
+### 📋 TODO: 수익화 준비 (나중에 구현)
+- [ ] **소셜 로그인 재구현**
+  - Google OAuth 2.0 연동
+  - JWT 토큰 기반 인증
+  - 사용자 프로필 관리
+  
+- [ ] **백엔드 연동**
+  - RESTful API 서버 구축
+  - 사용자 인증 및 세션 관리
+  - QR 코드 생성 기록 저장
+  
+- [ ] **프리미엄 기능**
+  - 사용량 제한 (무료/유료)
+  - 고급 QR 코드 스타일링
+  - 로고 삽입 기능
+  - 대량 생성 기능
+  
+- [ ] **분석 및 추적**
+  - QR 코드 스캔 통계
+  - 사용자 행동 분석
+  - 대시보드 구현
+
+### 🎯 우선순위
+1. **현재**: 기본 QR 코드 생성기 완성도 높이기
+2. **다음**: 소셜 로그인 시스템 재구현
+3. **향후**: 백엔드 연동 및 수익화 모델 구현
+
+## 📚 개발 가이드라인
+
+### 💻 코드 스타일
+- **컴포넌트**: React 함수형 컴포넌트 + TypeScript
+- **스타일링**: Styled Components 사용
+- **상태관리**: React Hooks (useState, useEffect)
+- **파일명**: PascalCase for components, camelCase for utilities
+
+### 🔄 개발 워크플로우
+1. 기능 구현 전 타입 정의
+2. 스타일 컴포넌트 분리
+3. 에러 핸들링 포함
+4. 반응형 디자인 고려
+5. 접근성 고려
+
+### 🎨 디자인 시스템
+- **Primary Color**: #667eea (보라색 계열)
+- **Secondary Color**: #764ba2 (그라데이션)
+- **Background**: 화이트 + 그라데이션 배경
+- **Border Radius**: 10px~25px (둥근 모서리)
+- **Typography**: 시스템 폰트 사용
+
+## 🔧 기술적 고려사항
+
+### 📱 반응형 디자인
+- 모바일 우선 설계
+- 데스크톱 최적화
+- 태블릿 호환성
+
+### 🔒 보안 (향후 구현)
+- Google OAuth 검증
+- JWT 토큰 보안
+- CORS 설정
+- 환경 변수 관리
+
+### 🚀 성능 최적화
+- 코드 스플리팅
+- 이미지 최적화
+- 메모이제이션
+- 번들 크기 최적화
+
+## 📋 참고 정보
+
+### 🗑️ 제거된 파일들
+- `src/components/LoginModal.tsx` - 로그인 모달
+- `src/hooks/useAuth.ts` - 인증 훅
+- `src/services/api.ts` - API 서비스
+- `GOOGLE_SETUP.md` - Google OAuth 설정 가이드
+- `BACKEND_API.md` - 백엔드 API 명세서
+
+### 💡 재구현 시 참고사항
+- 이전에 구현했던 Google 소셜 로그인 코드 재사용 가능
+- 백엔드 API 명세서 기반으로 서버 구축
+- 환경 변수 설정 필요 (Google Client ID, API Base URL)
+
+## 🎯 프로젝트 목표
+**최종 목표**: 수익화 가능한 프리미엄 QR 코드 생성 서비스 구축
+**현재 목표**: 단순하고 완성도 높은 QR 코드 생성기 제공
+
+---
+*마지막 업데이트: 로그인 기능 제거 완료, 단순한 QR 생성기로 회귀*
