@@ -38,4 +38,4 @@ jobs:
         
     - name: Deploy to S3
       run: |
-        aws s3 sync ./build s3://${{ secrets.FAST_FOOD_BUCKET }}/qr_generator --delete
+        aws s3 sync ./build s3://${{ secrets.FAST_FOOD_BUCKET }}/qr --delete
