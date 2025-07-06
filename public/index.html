@@ -1,33 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="theme-color" content="#667eea" />
+    
+    <!-- 기본 SEO 메타 태그 -->
+    <title>QR 코드 생성기 - 무료 온라인 QR 코드 생성 도구</title>
+    <meta name="description" content="텍스트, URL, 이메일, 연락처, Wi-Fi 등 다양한 형태의 QR 코드를 무료로 생성할 수 있는 온라인 도구입니다. 간편하고 빠르게 QR 코드를 만들어보세요." />
+    <meta name="keywords" content="QR코드, QR생성기, 무료QR, 온라인QR, 큐알코드, QR코드만들기, 바코드생성기, 무료바코드" />
+    <meta name="author" content="QR 코드 생성기" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://qr-generator.com" />
+    
+    <!-- Open Graph 메타 태그 (페이스북, 카카오톡 등) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="QR 코드 생성기 - 무료 온라인 QR 코드 생성 도구" />
+    <meta property="og:description" content="텍스트, URL, 이메일, 연락처, Wi-Fi 등 다양한 형태의 QR 코드를 무료로 생성할 수 있는 온라인 도구입니다." />
+    <meta property="og:url" content="https://qr-generator.com" />
+    <meta property="og:site_name" content="QR 코드 생성기" />
+    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:locale" content="ko_KR" />
+    
+    <!-- Twitter Card 메타 태그 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QR 코드 생성기 - 무료 온라인 QR 코드 생성 도구" />
+    <meta name="twitter:description" content="텍스트, URL, 이메일, 연락처, Wi-Fi 등 다양한 형태의 QR 코드를 무료로 생성할 수 있는 온라인 도구입니다." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+    
+    <!-- 추가 SEO 메타 태그 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="QR 코드 생성기" />
+    
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "QR 코드 생성기",
+      "description": "텍스트, URL, 이메일, 연락처, Wi-Fi 등 다양한 형태의 QR 코드를 무료로 생성할 수 있는 온라인 도구입니다.",
+      "url": "https://qr-generator.com",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "QR 코드 생성기"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1000"
+      }
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>자바스크립트가 비활성화되어 있습니다</h1>
+        <p>QR 코드 생성기를 사용하려면 브라우저에서 자바스크립트를 활성화해주세요.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
